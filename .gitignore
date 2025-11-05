@@ -1,0 +1,42 @@
+# Arquivos de desenvolvimento
+
+/.env
+/storage/*.log
+/storage/cache/
+/storage/tmp/
+.DS_Store
+Thumbs.db
+
+/vendor/
+.env
+.env.example
+.idea/
+.vscode/
+.well-known/
+
+# Arquivos de banco de dados
+db/*
+
+# Arquivos temporários
+/tmp/
+/cache/
+/logs/
+/certs/
+uploads/
+storage/
+config/
+
+# Arquivos de build
+/build/
+/dist/
+
+# Outros
+*.log
+*.tmp
+*.bak
+*.zip
+config.php
+/Sourcer/testes
+/Sourcer/App/Controllers/old
+/Sourcer/App/Models/old
+/Sourcer/App/Views/old
