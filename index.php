@@ -25,16 +25,34 @@
     /* PRINT: esconde painel de edição e mostra apenas preview */
     @media print {
       body { background: #fff; }
+      .container { 
+        max-width: 100% !important;
+        min-width: 100% !important;
+        width: 100% !important;        
+      }
       #editor-col { display:none !important; }
-      #preview-col { flex: 0 0 100% !important; max-width: 100% !important; }
+
+
+      /* Faz #preview-col ocupar 100% no print, mesmo que tenha .col-lg-6 */
+      #preview-col.col-lg-6 {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        min-width: 100% !important;
+        width: 100% !important;
+      }
+
+      .cv-preview.card{
+        border: none !important;
+      }
+
       .cv-preview { box-shadow: none; }
-      .no-print { display: none !important; }
+      .no-print { display: none !important; }      
     }
   </style>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
-    <div class="container-fluid no-print">
+  <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top no-print">
+    <div class="container-fluid">
       <span class="navbar-brand fw-bold">Gerador de Currículo</span>
       <div class="d-flex gap-2">
         <button class="btn btn-outline-secondary btn-icon" onclick="window.print()">
@@ -48,7 +66,7 @@
   </nav>
 
   <main class="container my-4">
-    <div class="row g-4">
+    <div class="row g-2">
       <!-- Coluna Editor -->
       <div class="col-12 col-lg-6" id="editor-col">
         <div class="card shadow-sm">
